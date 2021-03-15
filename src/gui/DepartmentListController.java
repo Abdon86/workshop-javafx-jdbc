@@ -114,7 +114,6 @@ public class DepartmentListController implements Initializable, DataChangeListen
 			e.printStackTrace();
 			Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), AlertType.ERROR);
 		}
-
 	}
 
 	@Override
@@ -122,7 +121,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 		updateTableView();
 
 	}
-
+	
 	private void initEditButtons() {
 		tableColumnEDIT.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
 		tableColumnEDIT.setCellFactory(param -> new TableCell<Department, Department>() {
